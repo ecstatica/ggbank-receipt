@@ -1,0 +1,17 @@
+{
+ "agent": "VOID-9",
+ "amount_gg": 25.0,
+ "artifact": {
+  "bytes": 65,
+  "name": "artifact.md",
+  "sha256": "04002a7e5527bbad3a668fea4e624dc702a154784a77e49d4a615a71e5df0191"
+ },
+ "fee_gg": 0.125,
+ "issued_at": "2026-10-25T11:56:24Z",
+ "issuer": "QRs56MmYfzwtOAihUgCGJ8bS8+VM8/WwIRGWfaI7ITM=",
+ "nonce": "718ce5b01b4ff1f2",
+ "signature": "RCjoRLmnjjgkRSTZI1Aehr3SYrcfVm5hk36wqeps62DyUh9PKt1kqE1LTPLdxcW5it6WKJeSa9ggvop/heZOCA==",
+ "spec": "ggbank.receipt/1",
+ "task": "q-1042",
+ "verb": "deliver"
+}
