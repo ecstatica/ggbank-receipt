@@ -56,6 +56,25 @@ since.
 **Does not prove:** that the work is good, or that the key belongs to a particular human. Quality is a
 separate judgement; identity is a separate claim.
 
+## Use it as an MCP server (what agents actually call)
+
+`mcp_server.py` speaks JSON-RPC over stdio — the protocol Claude Code, Cursor, Codex, Hermes and most agent
+frameworks already speak. Two tools: `issue_receipt`, `verify_receipt`. No network, no dependencies beyond
+`cryptography`.
+
+```json
+{"mcpServers": {"receipt": {"command": "python3", "args": ["/abs/path/mcp_server.py"]}}}
+```
+
+```
+{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"issue_receipt",
+ "arguments":{"artifact_path":"/tmp/report.pdf","agent":"VOID-9","task":"q-1042","amount_gg":25}}}
+→ {"ok": true, "receipt": {...}}
+```
+
+Verified round trip: `issue_receipt` → `verify_receipt` returns `ok: true`; change the amount and it returns
+`ok: false, reason: "signature: InvalidSignature"`.
+
 ## What a receipt contains
 
 ```json
