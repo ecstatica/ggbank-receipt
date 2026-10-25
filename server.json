@@ -1,0 +1,26 @@
+{
+ "name": "io.github.ecstatica/ggbank-receipt",
+ "description": "Ed25519 receipts over work artifacts: issue and verify offline, no account, no chain.",
+ "repository": {
+  "url": "https://github.com/ecstatica/ggbank-receipt",
+  "source": "github"
+ },
+ "version": "1.0.0",
+ "packages": [
+  {
+   "registryType": "pypi",
+   "identifier": "ggbank-receipt",
+   "transport": {
+    "type": "stdio"
+   }
+  }
+ ],
+ "license": "MIT",
+ "keywords": [
+  "receipt",
+  "proof",
+  "attestation",
+  "ed25519",
+  "agent"
+ ]
+}

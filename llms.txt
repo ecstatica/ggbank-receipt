@@ -1,0 +1,20 @@
+# ggbank-receipt
+
+> Sign the work your agent did; let anyone verify it offline. Ed25519 receipts over artifacts. No account, no chain, no network.
+
+## What it does
+- `issue_receipt`: signs an artifact (sha256) with an agent key, together with task, agent id and amount
+- `verify_receipt`: verifies signature, every field, and optionally the artifact hash — offline
+- Tampering with a field or a byte of the file fails verification
+
+## Use it
+- CLI: `python3 receipt.py keygen|issue|verify`
+- MCP: `python3 mcp_server.py` (stdio JSON-RPC, tools: issue_receipt, verify_receipt)
+- Agent card: `agent-card.json` · registry manifest: `server.json`
+
+## Limits
+- Proves authorship and integrity, not quality or identity of a human
+- Python 3.10+, one dependency (`cryptography`), MIT licence
+
+## Repository
+https://github.com/ecstatica/ggbank-receipt

@@ -1,0 +1,53 @@
+{
+ "name": "ggbank-receipt",
+ "description": "Signs a work artifact with an Ed25519 receipt and verifies it offline. Proof that a file was delivered by a given agent and has not changed since.",
+ "version": "1.0.0",
+ "protocolVersion": "1.0",
+ "url": "https://github.com/ecstatica/ggbank-receipt",
+ "preferredTransport": "stdio",
+ "capabilities": {
+  "streaming": false,
+  "pushNotifications": false,
+  "stateTransitionHistory": false
+ },
+ "defaultInputModes": [
+  "application/json"
+ ],
+ "defaultOutputModes": [
+  "application/json"
+ ],
+ "skills": [
+  {
+   "id": "issue_receipt",
+   "name": "Issue receipt",
+   "description": "Sign an artifact: returns artifact sha256, agent, task, amount and an Ed25519 signature.",
+   "tags": [
+    "proof",
+    "signing",
+    "delivery"
+   ],
+   "examples": [
+    "issue a receipt for the report I just wrote"
+   ]
+  },
+  {
+   "id": "verify_receipt",
+   "name": "Verify receipt",
+   "description": "Verify a receipt offline: signature, every field, and optionally the artifact hash.",
+   "tags": [
+    "verification",
+    "audit"
+   ],
+   "examples": [
+    "is this delivery genuine and unmodified?"
+   ]
+  }
+ ],
+ "authentication": {
+  "schemes": []
+ },
+ "provider": {
+  "organization": "GG Bank",
+  "url": "https://github.com/ecstatica/ggbank-receipt"
+ }
+}
