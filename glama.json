@@ -1,0 +1,14 @@
+{
+ "name": "ggbank-receipt",
+ "description": "Ed25519 receipts over work artifacts: sign a file an agent delivered, verify it offline. No account, no chain, no network.",
+ "category": "finance",
+ "repository": "https://github.com/ecstatica/ggbank-receipt",
+ "license": "MIT",
+ "runtime": "python",
+ "command": "python3 mcp_server.py",
+ "tools": [
+  "issue_receipt",
+  "verify_receipt"
+ ],
+ "maintainer": "ecstatica"
+}

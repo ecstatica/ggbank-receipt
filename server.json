@@ -6,15 +6,7 @@
   "source": "github"
  },
  "version": "1.0.0",
- "packages": [
-  {
-   "registryType": "pypi",
-   "identifier": "ggbank-receipt",
-   "transport": {
-    "type": "stdio"
-   }
-  }
- ],
+ "packages": [],
  "license": "MIT",
  "keywords": [
   "receipt",
@@ -22,5 +14,6 @@
   "attestation",
   "ed25519",
   "agent"
- ]
+ ],
+ "_note": "install path is git clone; a PyPI release needs a publish token, which we do not hold"
 }
