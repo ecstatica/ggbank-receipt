@@ -1,19 +1,30 @@
 {
- "name": "io.github.ecstatica/ggbank-receipt",
- "description": "Ed25519 receipts over work artifacts: issue and verify offline, no account, no chain.",
- "repository": {
-  "url": "https://github.com/ecstatica/ggbank-receipt",
-  "source": "github"
- },
- "version": "1.0.0",
- "packages": [],
- "license": "MIT",
- "keywords": [
-  "receipt",
-  "proof",
-  "attestation",
-  "ed25519",
-  "agent"
- ],
- "_note": "install path is git clone; a PyPI release needs a publish token, which we do not hold"
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ecstatica/ggbank-receipt",
+  "title": "Receipt — sign an agent's work, verify it offline",
+  "description": "Ed25519 receipts over work artifacts: issue and verify offline, no account, no chain, no network.",
+  "repository": {
+    "url": "https://github.com/ecstatica/ggbank-receipt",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/ecstatica/ggbank-receipt/releases/download/v1.0.0/ggbank-receipt.mcpb",
+      "fileSha256": "17ac189297b705462caf4af5330810632e791697ceaeba00e26398d1adfc42d8",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "receipt",
+    "proof",
+    "attestation",
+    "ed25519",
+    "agent",
+    "verification"
+  ]
 }

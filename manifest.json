@@ -1,0 +1,45 @@
+{
+  "manifest_version": "0.4",
+  "name": "ggbank-receipt",
+  "display_name": "Receipt — sign an agent's work, verify it offline",
+  "version": "1.0.0",
+  "description": "Ed25519 receipts over work artifacts: issue a signed receipt for a delivered file, verify it offline. No account, no chain, no network.",
+  "long_description": "A receipt binds an agent, a task and a file with an Ed25519 signature. Anyone can verify it with one command and needs no account, no network and no permission from the issuer. Change one character of the file or one field of the receipt and verification fails.\n\n**Proves:** this key signed this artifact hash with these fields at this time, and nothing has changed since.\n**Does not prove:** that the work is good, or that the key belongs to a particular human.\n\nTools: `issue_receipt` (hash an artifact, sign the canonical receipt JSON) and `verify_receipt` (check the signature and, when given the file, the hash — returning the failing reason when anything has moved).",
+  "author": {
+    "name": "GG Bank",
+    "url": "https://github.com/ecstatica/ggbank-receipt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecstatica/ggbank-receipt"
+  },
+  "homepage": "https://github.com/ecstatica/ggbank-receipt",
+  "documentation": "https://github.com/ecstatica/ggbank-receipt/blob/master/README.md",
+  "support": "https://github.com/ecstatica/ggbank-receipt/issues",
+  "server": {
+    "type": "uv",
+    "entry_point": "mcp_server.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": ["run", "--directory", "${__dirname}", "mcp_server.py"]
+    }
+  },
+  "tools": [
+    {
+      "name": "issue_receipt",
+      "description": "Sign an artifact with an Ed25519 receipt. Returns the receipt JSON: artifact hash, agent, task, amount and a signature anyone can verify offline."
+    },
+    {
+      "name": "verify_receipt",
+      "description": "Verify a receipt offline: signature, every field, and optionally the artifact hash. Returns ok=false with the failing reason when anything has changed."
+    }
+  ],
+  "compatibility": {
+    "platforms": ["darwin", "linux", "win32"],
+    "runtimes": {
+      "python": ">=3.10"
+    }
+  },
+  "keywords": ["receipt", "proof", "attestation", "ed25519", "agent", "verification"],
+  "license": "MIT"
+}

@@ -1,0 +1,11 @@
+[project]
+name = "ggbank-receipt"
+version = "1.0.0"
+description = "Ed25519 receipts over work artifacts: sign a file an agent delivered, verify it offline."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["cryptography>=41"]
+
+[tool.uv]
+package = false
