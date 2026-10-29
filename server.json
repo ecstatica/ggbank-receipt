@@ -7,7 +7,7 @@
     "url": "https://github.com/ecstatica/ggbank-receipt",
     "source": "github"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "packages": [
     {
       "registryType": "mcpb",
@@ -16,6 +16,12 @@
       "transport": {
         "type": "stdio"
       }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://receipt.whirlwindcorp.com/mcp"
     }
   ],
   "license": "MIT",
